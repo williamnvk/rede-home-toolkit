@@ -1,0 +1,81 @@
+{
+  "name": "rede-home-ui",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "William Novak",
+    "email": "williamnvk@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madeiramadeirabr/rede-home-ui"
+  },
+  "homepage": "https://ui.redehome.com.br/",
+  "keywords": [
+    "package",
+    "react",
+    "react-native",
+    "ui",
+    "toolkit",
+    "styled-components"
+  ],
+  "scripts": {
+    "prettier": "prettier — single-quote — trailing-comma all — write \"**/*.js\"",
+    "linter": "eslint --fix",
+    "start": "react-scripts start",
+    "lint": "eslint src/*.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "precommit": "NODE_ENV=development lint-staged"
+  },
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-native": "^0.59.5",
+    "react-scripts": "3.0.0",
+    "styled-components": "4.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "react-test-renderer": "16.8.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint src/ --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=6"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
