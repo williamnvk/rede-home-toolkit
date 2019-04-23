@@ -3,15 +3,19 @@ import log from '../utils/log';
 
 /* eslint-disable-next-line consistent-return */
 export function flexDirectionValidator(value) {
-  if (!value || !flexDirection.includes(value)) {
-    /* eslint-disable-next-line no-console */
-    log(
-      `Error with 'flex-direction: ${value}', flex-direction must by one of ${flexDirection.join(
-        '|',
-      )}`,
-    );
+  try {
+    if (!value || !flexDirection.includes(value)) {
+      /* eslint-disable-next-line no-console */
+      throw new Error(
+        `Error with 'flex-direction: ${value}', flex-direction must by one of ${flexDirection.join(
+          '|',
+        )}`,
+      );
+    }
+    return value;
+  } catch (e) {
+    log(e);
   }
-  return value;
 }
 
 /* eslint-disable-next-line consistent-return */

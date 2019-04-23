@@ -12,6 +12,6 @@ function setup() {
 describe('App Test Suite', () => {
   it('Should have an image', () => {
     const { wrapper } = setup();
-    expect(wrapper.find('div').exists()).toBe(true);
+    expect(wrapper.find('h1').exists()).toBe(true);
   });
 });
