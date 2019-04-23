@@ -1,8 +1,8 @@
-import components from './src/components';
-import utils from './src/utils';
-import constants from './src/constants';
-import validators from './src/validators';
-import css from './src/css';
+import components from './components';
+import utils from './utils';
+import constants from './constants';
+import validators from './validators';
+import css from './css';
 
 export default {
   components,

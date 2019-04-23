@@ -1,21 +1,3 @@
 {
-  "presets": ["module:metro-react-native-babel-preset"],
-  "plugins": [
-    [
-      "module-resolver",
-      {
-        "cwd": "babelrc",
-        "root": ["./src/"],
-        "extensions": [".js", ".ios.js", ".android.js"],
-        "alias": {
-          "images": "./assets/images"
-        }
-      }
-    ]
-  ],
-  "env": {
-    "production": {
-      "plugins": ["transform-remove-console"]
-    }
-  }
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
 }
