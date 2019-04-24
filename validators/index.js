@@ -1,3 +1,2 @@
-import * as flex from './flex';
-
-export { flex };
+export { flexDirectionValidator, flexWrapValidator } from './flex';
+export { colorValidator } from './color';

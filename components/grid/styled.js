@@ -1,10 +1,6 @@
 import styled from 'styled-components';
-import { row, column } from './css';
+import { basis } from './css';
 
-export const Row = styled.div`
-  ${row}
-`;
-
-export const Column = styled.div`
-  ${column}
+export const Component = styled.div`
+  ${basis}
 `;

@@ -32,7 +32,7 @@
     "eject": "react-scripts eject",
     "precommit": "NODE_ENV=development lint-staged"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "16.8.3",
     "react-dom": "16.8.3",
     "react-native": "^0.59.5",
@@ -78,11 +78,7 @@
     "extends": "react-app"
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -90,8 +86,6 @@
     ]
   },
   "rnpm": {
-    "assets": [
-      "./assets/fonts/"
-    ]
+    "assets": ["./assets/fonts/"]
   }
 }

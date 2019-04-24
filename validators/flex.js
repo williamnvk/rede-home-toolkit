@@ -1,13 +1,15 @@
-import { flexDirection, flexWrap } from '../constants/flex';
+import {
+  flexDirectionCollection,
+  flexWrapCollection,
+} from '../constants/flex';
 import log from '../utils/log';
 
 /* eslint-disable-next-line consistent-return */
 export function flexDirectionValidator(value) {
   try {
-    if (!value || !flexDirection.includes(value)) {
-      /* eslint-disable-next-line no-console */
+    if (!value || !flexDirectionCollection.includes(value)) {
       throw new Error(
-        `Error with 'flex-direction: ${value}', flex-direction must by one of ${flexDirection.join(
+        `Error with 'flex-direction: ${value}', flex-direction must by one of ${flexDirectionCollection.join(
           '|',
         )}`,
       );
@@ -20,13 +22,16 @@ export function flexDirectionValidator(value) {
 
 /* eslint-disable-next-line consistent-return */
 export function flexWrapValidator(value) {
-  if (!value || !flexWrap.includes(value)) {
-    /* eslint-disable-next-line no-console */
-    log(
-      `Error with 'flex-wrap: ${value}', flex-wrap must by one of ${flexWrap.join(
-        '|',
-      )}`,
-    );
+  try {
+    if (!value || !flexWrapCollection.includes(value)) {
+      throw new Error(
+        `Error with 'flex-wrap: ${value}', flex-wrap must by one of ${flexWrapCollection.join(
+          '|',
+        )}`,
+      );
+    }
+    return value;
+  } catch (e) {
+    log(e);
   }
-  return value;
 }

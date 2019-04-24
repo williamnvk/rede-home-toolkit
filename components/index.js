@@ -1,3 +1,2 @@
-import * as grid from './grid';
-
-export default grid;
+export Text from './text';
+export { Row, Column } from './grid';
