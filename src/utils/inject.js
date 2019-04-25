@@ -1,22 +1,18 @@
-import {
-  flexDirectionValidator,
-  flexWrapValidator,
-  colorValidator,
-} from '../validators';
+// @flow
+import { colorValidator } from '../validators';
 import { handleJustifyContent, handleAlignItems } from './flex';
+import { StyleProps } from '../types';
 
-export function inject(props) {
-  const {
-    width,
-    size,
-    height,
-    direction,
-    wrap,
-    justify,
-    align,
-    background,
-  } = props;
-
+export function inject({
+  width,
+  size,
+  height,
+  direction,
+  wrap,
+  justify,
+  align,
+  background,
+}: StyleProps): string {
   const styles = [];
 
   if (size) {
@@ -32,17 +28,11 @@ export function inject(props) {
   }
 
   if (direction) {
-    const flexDirection = flexDirectionValidator(direction);
-    if (flexDirection) {
-      styles.push(`flex-direction: ${flexDirection}`);
-    }
+    styles.push(`flex-direction: ${direction}`);
   }
 
   if (wrap) {
-    const flexWrap = flexWrapValidator(wrap);
-    if (flexWrap) {
-      styles.push(`flex-wrap: ${flexWrap}`);
-    }
+    styles.push(`flex-wrap: ${wrap}`);
   }
 
   if (justify) {

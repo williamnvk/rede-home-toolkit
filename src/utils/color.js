@@ -1,3 +1,4 @@
+// @flow
 import {
   colorPrimary,
   colorSecondary,
@@ -9,9 +10,10 @@ import {
   colorBlack,
   colorWarning,
 } from '../constants/color';
+import { ColorProps } from '../types';
 
 /* eslint-disable */
-function transform(col, amt) {
+function transform(col: string, amt: number): string {
   var usePound = false;
   if (col[0] == '#') {
     col = col.slice(1);
@@ -33,11 +35,11 @@ function transform(col, amt) {
 }
 /* eslint-enable */
 
-export function lighten(hex, n) {
+export function lighten(hex: string, n: number): string {
   return transform(hex, n);
 }
 
-export function darken(hex, n) {
+export function darken(hex: string, n: number): string {
   return transform(hex, -n);
 }
 
@@ -50,7 +52,7 @@ export function handleColor({
   info,
   grey,
   black,
-}) {
+}: ColorProps) {
   if (primary) return colorPrimary;
   if (secondary) return colorSecondary;
   if (success) return colorSuccess;

@@ -1,3 +1,4 @@
+// @flow
 import {
   fontSizeTiny,
   fontSizeSmall,
@@ -13,11 +14,12 @@ import {
   fontFamilyBlack,
   fontFamilyHeavy,
 } from '../constants/fontFamily';
+import { FontSizeProps, FontFamilyProps } from '../types/text';
 
 export function handleFontSize(
-  { tiny, small, large, extra },
-  multiplier = 1,
-) {
+  { tiny, small, large, extra }: FontSizeProps,
+  multiplier: number = 1,
+): number {
   if (tiny) return fontSizeTiny * multiplier;
   if (small) return fontSizeSmall * multiplier;
   if (large && !extra) return fontSizeLarge * multiplier;
@@ -31,7 +33,7 @@ export function handleFontFamily({
   bold,
   black,
   heavy,
-}) {
+}: FontFamilyProps): string {
   if (light) return fontFamilyLight;
   if (medium) return fontFamilyMedium;
   if (bold) return fontFamilyBold;

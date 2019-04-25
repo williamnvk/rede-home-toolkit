@@ -1,1 +1,1 @@
-export { Text, Row, Column } from './components';
+export { Text, Row, Column } from './src/components';

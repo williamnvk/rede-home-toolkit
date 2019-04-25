@@ -3,6 +3,7 @@
     "airbnb",
     "prettier",
     "plugin:prettier/recommended",
+    "prettier/flowtype",
     "prettier/react"
   ],
   "env": {
@@ -115,5 +116,5 @@
     "camelcase": [0, { "properties": "never" }],
     "react/forbid-prop-types": 0
   },
-  "plugins": ["jsx-a11y"]
+  "plugins": ["jsx-a11y", "flowtype"]
 }
