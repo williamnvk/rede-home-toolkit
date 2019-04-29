@@ -1,6 +1,21 @@
+export type FontSize =
+  | 'isTiny'
+  | 'isSmall'
+  | 'isRegular'
+  | 'isLarge'
+  | 'isExtraLarge';
+
+export type FontFamily =
+  | 'isLight'
+  | 'isMedium'
+  | 'isNormal'
+  | 'isBold'
+  | 'isBlack';
+
 export type FontSizeProps = {
-  tiny?: boolean,
+  tyni?: boolean,
   small?: boolean,
+  regular?: boolean,
   large?: boolean,
   extra?: boolean,
 };
@@ -10,5 +25,4 @@ export type FontFamilyProps = {
   medium?: boolean,
   bold?: boolean,
   black?: boolean,
-  heavy?: boolean,
 };

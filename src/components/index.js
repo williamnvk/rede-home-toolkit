@@ -1,4 +1,4 @@
-import Text from './text';
+import Heading from './heading';
 import { Row, Column } from './grid';
 
-export { Text, Row, Column };
+export { Heading, Row, Column };

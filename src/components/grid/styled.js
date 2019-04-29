@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { basis } from './css';
+import { basis } from './styles';
 
-export const Component = styled.div`
+export const Grid = styled.div`
   ${basis}
 `;

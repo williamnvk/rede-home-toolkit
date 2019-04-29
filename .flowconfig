@@ -1,4 +1,6 @@
 [ignore]
+<PROJECT_ROOT>/node_modules/webpack-cli
+<PROJECT_ROOT>/git/.*
 
 [include]
 
@@ -7,7 +9,5 @@
 [lints]
 
 [options]
-
-module.name_mapper='^Components' ->'<PROJECT_ROOT>/src/components'
 
 [strict]

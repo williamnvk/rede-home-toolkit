@@ -1,16 +1,11 @@
 // @flow
 import React, { memo } from 'react';
-import { Component } from './styled';
-import { defaultDirection } from '../../constants/flex';
-import { ColumnProps } from './types';
+import { Grid } from './styled';
+import type { ColumnProps } from './types';
+import { withRef } from '../../utils';
 
 function renderColumn(props: ColumnProps) {
-  const p = {
-    ...props,
-    direction: props.direction || defaultDirection,
-    size: props.size || 1,
-  };
-  return <Component {...p} />;
+  return <Grid el="column" {...props} />;
 }
 
-export default memo<ColumnProps>(renderColumn);
+export default memo<ColumnProps>(withRef(renderColumn));

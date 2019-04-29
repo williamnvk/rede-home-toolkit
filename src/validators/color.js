@@ -1,9 +1,14 @@
 // @flow
+import { PROJECT_NAME, ENV } from '../constants';
 
-/* eslint-disable-next-line consistent-return */
 export function colorValidator(color: string): string | boolean {
-  if (color && /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color)) {
-    return color;
+  const isValid = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(color);
+
+  if (ENV && !isValid) {
+    /* TODO create theme validator */
+    throw new Error(
+      `${PROJECT_NAME}: colorValidator(color) expects a valid hexadecial color argument.`,
+    );
   }
-  return false;
+  return color;
 }

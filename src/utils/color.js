@@ -1,16 +1,5 @@
 // @flow
-import {
-  colorPrimary,
-  colorSecondary,
-  colorText,
-  colorSuccess,
-  colorError,
-  colorInfo,
-  colorGray,
-  colorBlack,
-  colorWarning,
-} from '../constants/color';
-import { ColorProps } from '../types';
+import { colorValidator } from '../validators';
 
 /* eslint-disable */
 function transform(col: string, amt: number): string {
@@ -43,23 +32,15 @@ export function darken(hex: string, n: number): string {
   return transform(hex, -n);
 }
 
-export function handleColor({
-  primary,
-  secondary,
-  success,
-  error,
-  warning,
-  info,
-  grey,
-  black,
-}: ColorProps) {
-  if (primary) return colorPrimary;
-  if (secondary) return colorSecondary;
-  if (success) return colorSuccess;
-  if (error) return colorError;
-  if (warning) return colorWarning;
-  if (info) return colorInfo;
-  if (grey) return colorGray;
-  if (black) return colorBlack;
-  return colorText;
+export function handleColor(
+  param: string,
+  prefix: string = '',
+  variant: string | boolean,
+  colors: Object,
+) {
+  if (param.includes('custom:')) {
+    const bgColor = param.split(':')[1];
+    return `${prefix}: ${colorValidator(bgColor)}`;
+  }
+  return `${prefix}: ${colors[param][variant || 'main']}`;
 }

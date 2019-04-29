@@ -1,17 +1,4 @@
-import * as flex from './flex';
-import * as fontSize from './fontSize';
-import * as fontFamily from './fontFamily';
-import * as border from './border';
-import * as color from './color';
-import * as size from './size';
-import * as constants from './constants';
+import { name } from '../../package.json';
 
-export default {
-  flex,
-  fontSize,
-  fontFamily,
-  border,
-  color,
-  size,
-  constants,
-};
+export const PROJECT_NAME = name;
+export const ENV = process.env.NODE_ENV === 'production';

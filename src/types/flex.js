@@ -13,3 +13,12 @@ export type JustifyContent =
   | 'center'
   | 'flex-end'
   | 'space-between';
+
+export type AlignItems = 'flex-start' | 'center' | 'flex-end';
+
+export type FlexProps = {
+  direction?: FlexDirection,
+  wrap?: FlexWrap,
+  Justify?: JustifyContent,
+  align?: AlignItems,
+};

@@ -1,4 +1,5 @@
 import Row from './Row';
 import Column from './Column';
+import { Grid } from './styled';
 
-export { Row, Column };
+export { Grid, Row, Column };

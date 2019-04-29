@@ -1,15 +1,11 @@
 // @flow
 import React, { memo } from 'react';
-import { Component } from './styled';
-import { defaultDirection } from '../../constants/flex';
-import { RowProps } from './types';
+import { Grid } from './styled';
+import type { RowProps } from './types';
+import { withRef } from '../../utils';
 
 function renderRow(props: RowProps) {
-  const p = {
-    ...props,
-    direction: props.direction || defaultDirection,
-  };
-  return <Component {...p} />;
+  return <Grid el="row" {...props} />;
 }
 
-export default memo<RowProps>(renderRow);
+export default memo<RowProps>(withRef(renderRow));

@@ -20,7 +20,7 @@
     "styled-components"
   ],
   "scripts": {
-    "flush": "rm -rf yarn.lock && rm -rf node_modules && rm -fr $TMPDIR/react-* && yarn install",
+    "flush": "find . -name \"*.DS_Store\" -type f -delete && rm -rf yarn.lock && rm -rf node_modules && rm -fr $TMPDIR/react-* && yarn install",
     "prettier": "prettier — single-quote — trailing-comma all — write \"{,!(node_modules)/**/}*.js\"",
     "start": "react-scripts start",
     "lint": "eslint --debug ./",

@@ -1,4 +1,4 @@
-import { StyleProps } from '../../types';
+import type { StyleProps } from '../../types';
 
 export type ColumnProps = {
   ...StyleProps,
